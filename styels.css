@@ -1,0 +1,104 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+  
+@keyframes move {
+  0%   {left: 48.5rem;}
+  100% {left: 0rem;}
+}
+
+@keyframes jump {
+  0% {top: 9rem;}
+  30% {top: 6.25rem;}
+  70% {top: 6.25rem;}
+  100% {top: 9rem;}
+}
+
+@keyframes backMove{
+  0% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.startButton{
+  position: absolute;
+  left: calc(50% - 5rem);
+  top: 3rem;
+  width: 10rem;
+  height: 6rem;
+  border: white 2px;
+  background-color: gold;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.diffBUtton{
+  position: absolute;
+  width: 4rem;
+  left: calc(50% - 2rem);
+  font-family: 'Press Start 2P', cursive;
+}
+
+.activeHard{
+  background-color: red;
+}
+
+.counter{
+  position: absolute;
+  left: 47rem;
+}
+
+#game{
+  background-image: url(IMG/background_mario.jpeg);
+  background-position: 10% 50%;
+  background-repeat: repeat;
+  background-size: 25rem 20rem;
+  width: 50rem;
+  height: 12.5rem;
+  position: relative;
+  border: solid black 2px;
+  margin: auto;
+}
+
+#character{
+  background-image: url(IMG/standing_mario.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: 9.5rem;
+  left: 2rem;
+}
+
+#obstacle{
+  background-image: url(IMG/goomba.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1.8rem;
+  height: 1.8rem;
+  position: relative;
+  top: 7.7rem;
+  left: 48.2rem;
+}
+
+.obstacleMove{
+  animation: move 1s infinite linear;
+}
+
+.runningMario{
+  background-image: url(IMG/running_mario.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+}
+
+.animate{
+  animation: jump 0.5s;
+}
+
+.backgroundAnimation{
+  animation: backMove 1s infinite linear;
+}
